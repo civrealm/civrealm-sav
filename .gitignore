@@ -6,7 +6,8 @@
 # Generated files
 freeciv_gym.egg-info/
 tests/logs/
-tests/minitasks/
+tests/minitasks/testminitask
+tests/minitasks/minitask
 tests/notebook/
 tests/sav/
 .pytest_cache/
