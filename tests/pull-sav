@@ -1,0 +1,6 @@
+#!/bin/bash
+docker cp freeciv-web:/var/lib/tomcat10/webapps/data/savegames/$2/$1.sav .
+docker cp freeciv-web:/var/lib/tomcat10/webapps/data/savegames/$2/$1.sav.xz .
+docker cp freeciv-web:/var/lib/tomcat10/webapps/data/savegames/$2/$1.sav.zst .
+zstd -d $1.sav.zst
+xz -d $1.sav.xz

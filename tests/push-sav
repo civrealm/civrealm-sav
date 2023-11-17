@@ -1,0 +1,2 @@
+#!/bin/bash
+docker cp $1 freeciv-web:/var/lib/tomcat10/webapps/data/savegames/$2/

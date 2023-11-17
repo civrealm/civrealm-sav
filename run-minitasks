@@ -1,0 +1,32 @@
+#!/bin/bash
+
+export PYTHONPATH=$1/freeciv-sav/src/:$PYTHONPATH
+
+minitasks=("development_build_city" "battle_modern_era" "battle_ancient_era" "battle_info_era" "battle_industry_era" "battle_medieval" "battle_defend_city" "battle_attack_city" "diplomacy_trade_tech" "battle_naval" "battle_naval_modern" "development_citytile_wonder" "development_build_infra" "development_transport" "development_transport")
+docker_image=$2
+username=$3
+mapcnt=$4
+mode=$5
+
+if [ ! -d "tests/minitasks/$username/" ]; then
+  mkdir tests/minitasks/$username/
+fi
+
+# mkdir & clean local dir
+for minitask in ${minitasks[@]}
+do
+    if [ ! -d "tests/minitasks/$username/$minitask" ]; then
+        mkdir tests/minitasks/$username/$minitask
+    fi
+    count=`ls -l tests/minitasks/$username/$minitask| grep "^-" | wc -l`
+    if [ $count != "0" ]; then
+        find tests/minitasks/$username/$minitask -name "*.sav" -print0 | xargs -0 rm
+    fi
+done
+
+# execute minitask generation code
+python src/freeciv_sav/tasks/sav_task.py $username $mapcnt $docker_image $mode
+
+if [ "$mode" == "online" ]; then
+    bash push-minitasks $username
+fi

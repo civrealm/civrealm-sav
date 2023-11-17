@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PYTHONPATH=$1/freeciv-sav/src/:$PYTHONPATH
+
+python src/freeciv_sav/tasks/checker.py $2 $3

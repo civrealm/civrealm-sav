@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# the path of shared store space, like ~/mas/
+shared_path=$1
+#"tomcat10"
+tomcat=$2
+
+usernames=("minitask" "testminitask")
+
+for username in ${usernames[@]}
+do
+    docker exec -it freeciv-web rm -r /var/lib/$tomcat/webapps/data/savegames/$username/
+    docker exec -it freeciv-web mkdir -p /var/lib/$tomcat/webapps/data/savegames/$username/
+
+    cd $shared_path/minitasks/$username/
+    for minitask_zip in `ls`
+    do
+        docker cp $minitask_zip freeciv-web:/var/lib/$tomcat/webapps/data/savegames/$username/
+        docker exec -it freeciv-web unzip -o /var/lib/$tomcat/webapps/data/savegames/$username/$minitask_zip -d /var/lib/$tomcat/webapps/data/savegames/$username/
+        docker exec -it freeciv-web rm /var/lib/$tomcat/webapps/data/savegames/$username/$minitask_zip
+    done
+done

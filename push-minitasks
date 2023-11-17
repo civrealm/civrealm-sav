@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# the path of shared store space, like ~/mas/
+username=$1
+
+cd tests/minitasks/$username/
+
+for minitask in `ls`
+do
+    echo "$minitask"
+    cd $minitask/
+    count=`ls -l | grep "^-" | wc -l`
+    if [ $count != "0" ]; then
+        echo "ZIP $minitask WITH FILES $count"
+        zip -r ~/mas/minitasks/$username/$minitask.zip *
+    fi
+    cd ..
+done

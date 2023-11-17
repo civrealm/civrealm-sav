@@ -1,0 +1,87 @@
+alphabet,28
+ceremonial burial,28
+pottery,28
+masonry,28
+horseback riding,28
+bronze working,28
+warrior code,28
+writing,51
+code of laws,51
+mysticism,51
+mathematics,80
+map making,51
+polytheism,80
+the wheel,51
+currency,51
+iron working,80
+literacy,111
+trade,146
+monarchy,111
+astronomy,185
+seafaring,111
+construction,111
+the republic,146
+philosophy,226
+navigation,364
+engineering,226
+feudalism,185
+bridge building,226
+banking,316
+medicine,415
+university,364
+physics,580
+monotheism,364
+invention,468
+chivalry,270
+economics,700
+chemistry,640
+democracy,700
+theory of gravity,468
+steam engine,1103
+sanitation,763
+magnetism,828
+theology,580
+gunpowder,640
+atomic theory,828
+explosives,1250
+railroad,1402
+metallurgy,1031
+leadership,962
+industrialization,1726
+electricity,1643
+conscription,1402
+the corporation,2070
+communism,1895
+steel,2342
+refrigeration,1982
+tactics,1810
+genetic engineering,2250
+refining,2342
+espionage,2070
+electronics,2529 
+guerilla warfare,2918
+machine tools,3119
+amphibious warfare,2342
+combustion,2625
+miniaturization,3535
+automobile,3119
+flight,2819
+mass production,3222
+mobile warfare,3968
+radio,3222
+recycling,3430
+nuclear fission,3535
+labor union,4303
+computers,4417
+advanced flight,4303
+nuclear power,3749
+robotics,4647
+rocketry,4531
+combined arms,4647
+space flight,5120
+laser,3858
+plastics,5240
+environmentalism,5361
+superconductors,3968
+fusion power,4078
+stealth,5361

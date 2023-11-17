@@ -1,0 +1,17 @@
+# User-specific files
+.vscode/
+.settings/
+.ipynb_checkpoints/
+
+# Generated files
+freeciv_gym.egg-info/
+tests/logs/
+tests/minitasks/
+tests/notebook/
+tests/sav/
+.pytest_cache/
+__pycache__/
+*.pyc
+.idea
+*.log
+freeciv_sav.egg-info/
