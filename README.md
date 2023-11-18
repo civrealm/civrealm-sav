@@ -1,8 +1,8 @@
-# freeciv-sav
+# CivRealm Mini-Game Creation
 
 ## Motivation
 
-Freeciv document file processing module, which reconstructs and analyzes sav files and adds, deletes, and modifies information. Its meaning includes
+Code to create mini-games in CivRealm, including a Freeciv document file processing module, which reconstructs and analyzes sav files and adds, deletes, and modifies information. Its meaning includes
 1. Based on the structural analysis of the stored documents, provide the information statistics of the current snapshot and historical snapshots, first detect the current behavior of the agent in the task, and the historical behavior index curve
 
 2. Add, delete, and modify operations based on key information, and provide a rich initialization environment for different processes and tasks with responses (siege, renovation, city construction, etc.) under the condition of meeting the key constraints of the target, and further improve the agent's ability in local tasks Decision-making capacity
