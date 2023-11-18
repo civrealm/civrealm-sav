@@ -14,7 +14,7 @@ Code to create mini-games in CivRealm, including a Freeciv document file process
 Installation for freeciv-sav users and developers
 
 ```
-cd freeciv-sav
+cd civrealm-sav
 pip install -e .
 ```
 
